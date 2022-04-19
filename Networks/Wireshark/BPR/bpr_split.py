@@ -1,0 +1,10 @@
+file1 = open(r"C:\networks\work\Networks\Wireshark\BPR\bpr_chat.txt", "r")
+chat = file1.read()
+conversation = chat.split("BPR")
+conversation.remove('')
+file1.close()
+file2 = open(r"C:\networks\work\Networks\Wireshark\BPR\bpr_chat_seperated.txt", "w")
+file2.write("number of messages: " + str(len(conversation)) + '\n')
+for line in conversation:
+    file2.write('BPR' + line + '\n')
+file2.close()

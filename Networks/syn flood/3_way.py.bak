@@ -1,0 +1,3 @@
+from scapy.layer import TCP
+syn_seg = TCP()
+syn_seg.show()
